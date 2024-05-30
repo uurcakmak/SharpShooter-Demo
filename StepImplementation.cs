@@ -5,46 +5,36 @@ using FluentAssertions;
 using Gauge.CSharp.Lib;
 using Gauge.CSharp.Lib.Attribute;
 
+using Gauge.CSharp.Lib;
+using Gauge.CSharp.Lib.Attribute;
+using OpenQA.Selenium;
+using SharpShooterDemo.Utilities;
+
 namespace SharpShooterDemo
 {
     public class StepImplementation
     {
-        private HashSet<char> _vowels;
-
-        [Step("Vowels in English language are <vowelString>.")]
-        public void SetLanguageVowels(string vowelString)
+        [Step("Open the browser and navigate to <url>")]
+        public void OpenBrowser(string url)
         {
-            _vowels = new HashSet<char>();
-            foreach (var c in vowelString)
+            Driver.Initialize();
+            Driver.WebDriver.Navigate().GoToUrl(url);
+        }
+
+        [Step("Close the browser")]
+        public void CloseBrowser()
+        {
+            Driver.CleanUp();
+        }
+
+        [Step("Check that the page title is <title>")]
+        public void CheckPageTitle(string title)
+        {
+            string pageTitle = Driver.WebDriver.Title;
+            if (!pageTitle.Equals(title))
             {
-                _vowels.Add(c);
+                throw new Exception($"Expected title {title}, but got {pageTitle}");
             }
-        }
-
-        [Step("The word <word> has <expectedCount> vowels.")]
-        public void VerifyVowelsCountInWord(string word, int expectedCount)
-        {
-            var actualCount = CountVowels(word);
-            actualCount.Should().Be(expectedCount);
-        }
-
-        [Step("Almost all words have vowels <wordsTable>")]
-        public void VerifyVowelsCountInMultipleWords(Table wordsTable)
-        {
-            var rows = wordsTable.GetTableRows();
-            foreach (var row in rows)
-            {
-                var word = row.GetCell("Word");
-                var expectedCount = Convert.ToInt32(row.GetCell("Vowel Count"));
-                var actualCount = CountVowels(word);
-
-                actualCount.Should().Be(expectedCount);
-            }
-        }
-
-        private int CountVowels(string word)
-        {
-            return word.Count(c => _vowels.Contains(c));
         }
     }
 }
