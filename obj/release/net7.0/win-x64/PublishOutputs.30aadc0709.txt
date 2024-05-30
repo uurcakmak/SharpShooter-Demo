@@ -1,0 +1,7 @@
+c:\Source\Personal\SharpShooter-Demo\gauge_bin\netcore-template.dll
+c:\Source\Personal\SharpShooter-Demo\gauge_bin\netcore-template.deps.json
+c:\Source\Personal\SharpShooter-Demo\gauge_bin\netcore-template.pdb
+c:\Source\Personal\SharpShooter-Demo\gauge_bin\FluentAssertions.dll
+c:\Source\Personal\SharpShooter-Demo\gauge_bin\Gauge.CSharp.Lib.dll
+c:\Source\Personal\SharpShooter-Demo\gauge_bin\System.Configuration.ConfigurationManager.dll
+c:\Source\Personal\SharpShooter-Demo\gauge_bin\System.Security.Cryptography.ProtectedData.dll

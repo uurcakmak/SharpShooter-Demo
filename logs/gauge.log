@@ -1,0 +1,95 @@
+30-05-2024 21:03:50.787 [Gauge] [DEBUG] Created gauge_screenshots_dir at C:\Source\Personal\SharpShooter-Demo\.gauge\screenshots
+30-05-2024 21:03:50.789 [Gauge] [INFO] Compatible version of plugin html-report not found. Installing plugin html-report...
+30-05-2024 21:03:50.789 [Gauge] [DEBUG] Gathering metadata for html-report
+30-05-2024 21:03:50.789 [Gauge] [DEBUG] Downloading https://downloads.gauge.org/plugin/html-report?l=dotnet&p=dotnet&o=windows&a=amd64
+30-05-2024 21:03:51.024 [Gauge] [DEBUG] Downloading https://github.com/getgauge/html-report/releases/download/v4.3.1/html-report-4.3.1-windows.x86_64.zip
+30-05-2024 21:03:54.602 [Gauge] [DEBUG] Installing plugin html-report 4.3.1
+30-05-2024 21:03:54.674 [Gauge] [INFO] Successfully installed plugin 'html-report' version 4.3.1
+30-05-2024 21:03:54.675 [Gauge] [DEBUG] Plugin dotnet is already installed.
+30-05-2024 21:03:54.675 [Gauge] [INFO] Installing required plugins.
+30-05-2024 21:03:54.675 [Gauge] [DEBUG] Installing plugin 'screenshot'
+30-05-2024 21:03:54.675 [Gauge] [DEBUG] Gathering metadata for screenshot
+30-05-2024 21:03:54.676 [Gauge] [DEBUG] Downloading https://downloads.gauge.org/plugin/screenshot?l=dotnet&p=dotnet,html-report&o=windows&a=amd64
+30-05-2024 21:03:54.736 [Gauge] [DEBUG] Downloading https://github.com/getgauge/gauge_screenshot/releases/download/v0.2.0/screenshot-0.2.0-windows.x86_64.zip
+30-05-2024 21:03:54.773 [Gauge] [DEBUG] Checking updates...
+30-05-2024 21:03:54.773 [Gauge] [DEBUG] Downloading https://downloads.gauge.org/plugin/dotnet?l=dotnet&p=dotnet,html-report&o=windows&a=amd64
+30-05-2024 21:03:54.835 [Gauge] [DEBUG] Downloading https://downloads.gauge.org/plugin/html-report?l=dotnet&p=dotnet,html-report&o=windows&a=amd64
+30-05-2024 21:03:55.847 [Gauge] [DEBUG] Installing plugin screenshot 0.2.0
+30-05-2024 21:03:55.940 [Gauge] [INFO] Successfully installed plugin 'screenshot' version 0.2.0
+30-05-2024 21:03:55.940 [Gauge] [DEBUG] Parsing started.
+30-05-2024 21:03:55.940 [Gauge] [DEBUG] Started concepts parsing.
+30-05-2024 21:03:55.941 [Gauge] [DEBUG] 0 concepts parsing completed.
+30-05-2024 21:03:55.941 [Gauge] [DEBUG] Started specifications parsing.
+30-05-2024 21:03:55.941 [Gauge] [DEBUG] 1 specifications parsing completed.
+30-05-2024 21:03:55.941 [Gauge] [DEBUG] Parsing completed.
+30-05-2024 21:03:57.419 [dotnet] [DEBUG] Loading assembly from : Gauge.Dotnet.AssemblyPath
+30-05-2024 21:03:57.423 [dotnet] [DEBUG] Using ExecutableRunnerServiceHandler
+30-05-2024 21:03:57.479 [Gauge] [DEBUG] Attempting to connect to grpc server at port: 53238
+30-05-2024 21:03:57.479 [Gauge] [DEBUG] Successfully made the connection with runner with port: 53238
+30-05-2024 21:03:57.479 [Gauge] [DEBUG] Validation started.
+30-05-2024 21:03:57.636 [dotnet] [DEBUG] Loading assembly from : Gauge.Dotnet.AssemblyPath
+30-05-2024 21:03:57.636 [dotnet] [DEBUG] Try load Gauge.CSharp.Lib in GaugeLoadContext
+30-05-2024 21:03:57.671 [dotnet] [DEBUG] Try load netcore-template in GaugeLoadContext
+30-05-2024 21:03:57.691 [dotnet] [DEBUG] Try load System.Runtime in GaugeLoadContext
+30-05-2024 21:03:57.691 [dotnet] [DEBUG] Try load System.Collections in GaugeLoadContext
+30-05-2024 21:03:57.691 [dotnet] [DEBUG] Try load FluentAssertions in GaugeLoadContext
+30-05-2024 21:03:57.771 [dotnet] [DEBUG] Try load System.Linq in GaugeLoadContext
+30-05-2024 21:03:57.771 [dotnet] [DEBUG] Try load System.Runtime in GaugeLoadContext
+30-05-2024 21:03:57.772 [dotnet] [DEBUG] Number of AssembliesReferencingGaugeLib : 1
+30-05-2024 21:03:57.772 [dotnet] [DEBUG] Try load System.Runtime in GaugeLoadContext
+30-05-2024 21:03:57.772 [dotnet] [DEBUG] Try load System.Collections in GaugeLoadContext
+30-05-2024 21:03:57.773 [dotnet] [DEBUG] Building StepRegistry...
+30-05-2024 21:03:57.774 [dotnet] [DEBUG] 3 Step implementations found. Adding to registry...
+30-05-2024 21:03:57.774 [dotnet] [DEBUG] 'Vowels in English language are {}.': implementation found in StepRegistry, setting reflected methodInfo
+30-05-2024 21:03:57.775 [dotnet] [DEBUG] 'The word {} has {} vowels.': implementation found in StepRegistry, setting reflected methodInfo
+30-05-2024 21:03:57.775 [dotnet] [DEBUG] 'Almost all words have vowels {}': implementation found in StepRegistry, setting reflected methodInfo
+30-05-2024 21:03:57.776 [dotnet] [DEBUG] Try load System.Collections.Concurrent in GaugeLoadContext
+30-05-2024 21:03:57.776 [dotnet] [DEBUG] Try load System.Threading in GaugeLoadContext
+30-05-2024 21:03:57.776 [dotnet] [DEBUG] Loaded Instance Manager of Type:Gauge.CSharp.Lib.DefaultClassInstanceManager
+30-05-2024 21:03:57.791 [Gauge] [DEBUG] Validation completed.
+30-05-2024 21:03:57.791 [Gauge] [DEBUG] Run started
+30-05-2024 21:03:57.792 [Gauge] [DEBUG] Starting Html Report plugin
+30-05-2024 21:03:57.852 [html-report] [DEBUG] Setting MaxRecvMsgSize = 1024 MB
+30-05-2024 21:03:57.852 [Gauge] [DEBUG] Attempting to connect to grpc server at port: 53241
+30-05-2024 21:03:57.853 [Gauge] [DEBUG] Successfully made the connection with plugin with port: 53241
+30-05-2024 21:03:57.853 [Gauge] [DEBUG] Initialising suite data store.
+30-05-2024 21:03:57.869 [Gauge] [INFO] # Specification Heading
+30-05-2024 21:03:57.873 [Gauge] [INFO] ## Vowel counts in single word
+30-05-2024 21:03:57.879 [Gauge] [DEBUG] * Vowels in English language are "aeiou".
+
+30-05-2024 21:03:57.887 [dotnet] [DEBUG] Executing method: SetLanguageVowels
+30-05-2024 21:03:57.887 [dotnet] [DEBUG] Try load System.Collections in GaugeLoadContext
+30-05-2024 21:03:57.890 [Gauge] [DEBUG] * The word "gauge" has "3" vowels.
+
+30-05-2024 21:03:57.897 [dotnet] [DEBUG] Executing method: VerifyVowelsCountInWord
+30-05-2024 21:03:57.897 [dotnet] [DEBUG] Try load System.Runtime in GaugeLoadContext
+30-05-2024 21:03:57.898 [dotnet] [DEBUG] Try load System.Linq in GaugeLoadContext
+30-05-2024 21:03:57.899 [dotnet] [DEBUG] Try load System.Threading in GaugeLoadContext
+30-05-2024 21:03:57.899 [dotnet] [DEBUG] Try load System.Collections in GaugeLoadContext
+30-05-2024 21:03:57.899 [dotnet] [DEBUG] Try load System.Collections.Concurrent in GaugeLoadContext
+30-05-2024 21:03:57.901 [dotnet] [DEBUG] Try load System.Data.Common in GaugeLoadContext
+30-05-2024 21:03:57.902 [dotnet] [DEBUG] Try load System.Xml.XDocument in GaugeLoadContext
+30-05-2024 21:03:57.907 [Gauge] [INFO] ## Vowel counts in multiple word
+30-05-2024 21:03:57.909 [Gauge] [DEBUG] * Vowels in English language are "aeiou".
+
+30-05-2024 21:03:57.909 [dotnet] [DEBUG] Executing method: SetLanguageVowels
+30-05-2024 21:03:57.910 [Gauge] [DEBUG] * Almost all words have vowels 
+
+   |Word  |Vowel Count|
+   |------|-----------|
+   |Gauge |3          |
+   |Mingle|2          |
+   |Snap  |1          |
+   |GoCD  |1          |
+   |Rhythm|0          |
+30-05-2024 21:03:57.960 [dotnet] [DEBUG] Executing method: VerifyVowelsCountInMultipleWords
+30-05-2024 21:03:57.966 [html-report] [DEBUG] Transformed SuiteResult to report structure
+30-05-2024 21:03:58.043 [Gauge] [DEBUG] Sending kill message to Html Report plugin.
+30-05-2024 21:03:58.044 [html-report] [INFO] Successfully generated html-report to => C:\Source\Personal\SharpShooter-Demo\reports\html-report\index.html
+30-05-2024 21:03:58.044 [html-report] [DEBUG] Done generating HTML report using theme from C:\Users\Ugur\AppData\Roaming\gauge\plugins\html-report\4.3.1\themes\default
+30-05-2024 21:03:58.046 [dotnet] [DEBUG] KillProcessrequest received
+30-05-2024 21:03:58.047 [Gauge] [INFO] Specifications:	1 executed	1 passed	0 failed	0 skipped
+30-05-2024 21:03:58.047 [Gauge] [INFO] Scenarios:	2 executed	2 passed	0 failed	0 skipped
+30-05-2024 21:03:58.048 [Gauge] [INFO] 
+Total time taken: 173ms
+30-05-2024 21:03:58.049 [Gauge] [INFO] Updates are available. Run `gauge update -c` for more info.

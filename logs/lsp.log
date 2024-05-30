@@ -1,0 +1,37 @@
+30-05-2024 21:02:23.399 [Gauge] [INFO] Initializing concepts cache with 0 concepts
+30-05-2024 21:02:23.400 [Gauge] [INFO] Initializing specs cache with 1 specs
+30-05-2024 21:02:23.400 [Gauge] [DEBUG] Adding specs from c:\Source\Personal\SharpShooter-Demo\specs\example.spec
+30-05-2024 21:02:23.400 [Gauge] [INFO] Initializing steps cache with 1 steps
+30-05-2024 21:02:23.401 [Gauge] [DEBUG] Watching directory: c:\Source\Personal\SharpShooter-Demo\specs
+30-05-2024 21:02:23.401 [Gauge] [DEBUG] Found 1 files
+30-05-2024 21:02:23.401 [Gauge] [INFO] Starting language runner
+30-05-2024 21:02:28.961 [dotnet] [INFO] [NuGet Manager] [Info]     [CredentialProvider]VstsCredentialProvider - Acquired bearer token using 'MSAL Silent'
+30-05-2024 21:02:28.961 [dotnet] [INFO] [NuGet Manager] [Info]     [CredentialProvider]VstsCredentialProvider - Attempting to exchange the bearer token for an Azure DevOps session token.
+30-05-2024 21:02:30.886 [Gauge] [INFO] Initializing concepts cache with 0 concepts
+30-05-2024 21:02:30.887 [Gauge] [INFO] Initializing specs cache with 1 specs
+30-05-2024 21:02:30.887 [Gauge] [DEBUG] Adding specs from c:\Source\Personal\SharpShooter-Demo\specs\example.spec
+30-05-2024 21:02:30.887 [Gauge] [INFO] Initializing steps cache with 1 steps
+30-05-2024 21:02:30.889 [Gauge] [DEBUG] Watching directory: c:\Source\Personal\SharpShooter-Demo\specs
+30-05-2024 21:02:30.889 [Gauge] [DEBUG] Found 1 files
+30-05-2024 21:02:30.889 [Gauge] [INFO] Starting language runner
+30-05-2024 21:02:41.461 [dotnet] [INFO] C:\Program Files\dotnet\sdk\8.0.300-preview.24203.14\Microsoft.Common.CurrentVersion.targets(2401,5): warning MSB3101: Could not write state file "obj\release\net7.0\win-x64\netcore-template.csproj.AssemblyReference.cache". The process cannot access the fi
+30-05-2024 21:02:41.461 [dotnet] [INFO] le 'c:\Source\Personal\SharpShooter-Demo\obj\release\net7.0\win-x64\netcore-template.csproj.AssemblyReference.cache' because it is being used by another process. [c:\Source\Personal\SharpShooter-Demo\netcore-template.csproj]
+30-05-2024 21:02:42.603 [dotnet] [INFO] CSC : error CS2012: Cannot open 'c:\Source\Personal\SharpShooter-Demo\obj\release\net7.0\win-x64\netcore-template.dll' for writing -- 'The process cannot access the file 'c:\Source\Personal\SharpShooter-Demo\obj\release\net7.0\win-x64\netcore-template.dll'
+30-05-2024 21:02:42.603 [dotnet] [INFO] because it is being used by another process.' [c:\Source\Personal\SharpShooter-Demo\netcore-template.csproj]
+30-05-2024 21:02:42.781 [dotnet] [DEBUG] Loading assembly from : Gauge.Dotnet.AssemblyPath
+30-05-2024 21:02:42.786 [dotnet] [DEBUG] Using AuthoringRunnerServiceHandler
+30-05-2024 21:02:42.871 [Gauge] [DEBUG] Attempting to connect to grpc server at port: 64245
+30-05-2024 21:02:42.871 [Gauge] [DEBUG] Successfully made the connection with runner with port: 64245
+30-05-2024 21:02:42.871 [Gauge] [INFO] LangServer: reading on stdin, writing on stdout
+30-05-2024 21:02:43.079 [Gauge] [DEBUG] Validation started.
+30-05-2024 21:02:43.090 [Gauge] [DEBUG] Validation completed.
+30-05-2024 21:02:46.058 [Gauge] [DEBUG] Validation started.
+30-05-2024 21:02:46.059 [Gauge] [DEBUG] Validation completed.
+30-05-2024 21:03:12.215 [Gauge] [DEBUG] Validation started.
+30-05-2024 21:03:12.216 [Gauge] [DEBUG] Validation completed.
+30-05-2024 21:03:12.226 [Gauge] [DEBUG] Validation started.
+30-05-2024 21:03:12.228 [Gauge] [DEBUG] Validation completed.
+30-05-2024 21:04:04.320 [Gauge] [DEBUG] Validation started.
+30-05-2024 21:04:04.321 [Gauge] [DEBUG] Validation completed.
+30-05-2024 21:12:52.937 [Gauge] [DEBUG] Spec file removed: c:\Source\Personal\SharpShooter-Demo\specs\example.spec
+30-05-2024 21:12:53.292 [Gauge] [ERROR] No such file or diretory: c:\Source\Personal\SharpShooter-Demo\specs

@@ -1,0 +1,12 @@
+c:\Source\Personal\SharpShooter-Demo\obj\release\net7.0\win-x64\netcore-template.csproj.AssemblyReference.cache
+c:\Source\Personal\SharpShooter-Demo\obj\release\net7.0\win-x64\netcore-template.GeneratedMSBuildEditorConfig.editorconfig
+c:\Source\Personal\SharpShooter-Demo\obj\release\net7.0\win-x64\netcore-template.AssemblyInfoInputs.cache
+c:\Source\Personal\SharpShooter-Demo\obj\release\net7.0\win-x64\netcore-template.AssemblyInfo.cs
+c:\Source\Personal\SharpShooter-Demo\obj\release\net7.0\win-x64\netcore-template.csproj.CoreCompileInputs.cache
+c:\Source\Personal\SharpShooter-Demo\obj\release\net7.0\win-x64\netcore-template.dll
+c:\Source\Personal\SharpShooter-Demo\obj\release\net7.0\win-x64\refint\netcore-template.dll
+c:\Source\Personal\SharpShooter-Demo\obj\release\net7.0\win-x64\netcore-template.pdb
+c:\Source\Personal\SharpShooter-Demo\bin\release\net7.0\win-x64\netcore-template.deps.json
+c:\Source\Personal\SharpShooter-Demo\bin\release\net7.0\win-x64\netcore-template.dll
+c:\Source\Personal\SharpShooter-Demo\bin\release\net7.0\win-x64\netcore-template.pdb
+c:\Source\Personal\SharpShooter-Demo\obj\release\net7.0\win-x64\ref\netcore-template.dll
