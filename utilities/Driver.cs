@@ -141,6 +141,9 @@ namespace SharpShooterDemo.Utilities
                 wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(by));
 
                 elements = _webDriver.FindElements(by);
+            }else
+            {
+                elements = _webDriver.FindElements(by);
             }
 
             return elements;
