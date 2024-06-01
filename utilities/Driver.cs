@@ -157,10 +157,6 @@ namespace SharpShooterDemo.Utilities
             Headless = headless;
             var driverPath = Path.Combine(Directory.GetCurrentDirectory(), "drivers");
             var options = new ChromeOptions();
-            options.AddArgument("--no-sandbox");
-            if (Headless)
-                options.AddArgument("--headless");
-
             _webDriver = new ChromeDriver(driverPath, options);
         }
 
