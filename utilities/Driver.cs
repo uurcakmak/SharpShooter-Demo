@@ -1,3 +1,4 @@
+using System.Collections.ObjectModel;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Interactions;
@@ -60,6 +61,11 @@ namespace SharpShooterDemo.Utilities
             return ElementExists(By.ClassName(className));
         }
 
+        public static bool ElementExistsByCss(string css)
+        {
+            return ElementExists(By.CssSelector(css));
+        }
+
         public static bool ElementExistsById(string id)
         {
             return ElementExists(By.Id(id));
@@ -68,6 +74,11 @@ namespace SharpShooterDemo.Utilities
         public static void Forward()
         {
             _webDriver.Navigate().Forward();
+        
+        }
+        public static void SwitchToFrame(IWebElement element)
+        {
+            _webDriver.SwitchTo().Frame(element);
         }
 
         public static string GetElementAttribute(IWebElement element, string attributeName)
@@ -88,6 +99,26 @@ namespace SharpShooterDemo.Utilities
         public static IWebElement GetElementById(string id)
         {
             return _webDriver.FindElement(By.Id(id));
+        }
+
+        public static IWebElement GetElementByName(string name)
+        {
+            return _webDriver.FindElement(By.Name(name));
+        }
+
+        public static IWebElement GetElementByClassName(string className)
+        {
+            return _webDriver.FindElement(By.ClassName(className));
+        }
+
+        public static IWebElement GetElementByCss(string css)
+        {
+            return _webDriver.FindElement(By.CssSelector(css));
+        }
+
+        public static ReadOnlyCollection<IWebElement> GetElementsBy(By by)
+        {
+            return _webDriver.FindElements(by);
         }
 
         public static string GetTextBoxValue(IWebElement element)
@@ -141,7 +172,7 @@ namespace SharpShooterDemo.Utilities
             Actions action = new Actions(_webDriver);
             action.ContextClick(element).Perform();
         }
-
+        
         public static void ScrollToBottom()
         {
             IJavaScriptExecutor js = (IJavaScriptExecutor)_webDriver;
