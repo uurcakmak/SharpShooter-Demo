@@ -1,5 +1,5 @@
 # Gauge - metadata dir
-.gauge
+#.gauge/screenshots
 
 # Gauge - log files dir
 logs
@@ -16,5 +16,6 @@ obj
 
 .vs
 .vscode
-
-screenshots/*
+.gauge/executionStatus.json
+.gauge/failures.json
+.gauge/lastRunCmd.json
