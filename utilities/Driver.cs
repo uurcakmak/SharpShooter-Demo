@@ -39,7 +39,7 @@ namespace SharpShooterDemo.Utilities
         public static void ClickElement(WebElementInfo elmInfo)
         {
             WebDriverWait wait = new WebDriverWait(_webDriver, TimeSpan.FromSeconds(10));
-            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(elmInfo.Locator));
+            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(elmInfo.Locator));
             elmInfo.Element.Click();
         }
 
@@ -128,8 +128,8 @@ namespace SharpShooterDemo.Utilities
         }
         public static IWebElement GetElementBy(By by)
         {
-                        WebDriverWait wait = new WebDriverWait(_webDriver, TimeSpan.FromSeconds(10));
-            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(by));
+            WebDriverWait wait = new WebDriverWait(_webDriver, TimeSpan.FromSeconds(10));
+            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(by));
 
             var element = _webDriver.FindElement(by);
 
@@ -157,6 +157,9 @@ namespace SharpShooterDemo.Utilities
             Headless = headless;
             var driverPath = Path.Combine(Directory.GetCurrentDirectory(), "drivers");
             var options = new ChromeOptions();
+            options.AddArgument("headless");
+            options.AddArgument("window-size=1920,1080"); // Set a fixed window size
+            options.AddArgument("disable-gpu"); // Applicable to Windows OS
             _webDriver = new ChromeDriver(driverPath, options);
         }
 
