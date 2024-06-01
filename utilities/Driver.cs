@@ -38,13 +38,8 @@ namespace SharpShooterDemo.Utilities
 
         public static void ClickElement(WebElementInfo elmInfo)
         {
-            if (Headless)
-            {
-                WebDriverWait wait = new WebDriverWait(_webDriver, TimeSpan.FromSeconds(10));
-                wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(elmInfo.Locator));
-
-            }
-
+            WebDriverWait wait = new WebDriverWait(_webDriver, TimeSpan.FromSeconds(10));
+            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(elmInfo.Locator));
             elmInfo.Element.Click();
         }
 
@@ -135,16 +130,10 @@ namespace SharpShooterDemo.Utilities
         public static ReadOnlyCollection<IWebElement> GetElementsBy(By by)
         {
             ReadOnlyCollection<IWebElement> elements = null;
-            if (Headless)
-            {
-                WebDriverWait wait = new WebDriverWait(_webDriver, TimeSpan.FromSeconds(10));
-                wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(by));
+            WebDriverWait wait = new WebDriverWait(_webDriver, TimeSpan.FromSeconds(10));
+            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(by));
 
-                elements = _webDriver.FindElements(by);
-            }else
-            {
-                elements = _webDriver.FindElements(by);
-            }
+            elements = _webDriver.FindElements(by);
 
             return elements;
         }
