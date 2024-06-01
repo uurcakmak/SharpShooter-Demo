@@ -23,10 +23,11 @@ tags: KocSistem
 tags: Ford
 * Open the browser and navigate to "https://www.ford.com.tr"
 * Check that the page title is "Hayalinizdeki Ford'a Sahip Olmanın Tam Zamanı | Ford Türkiye"
-* Find elements by selector "a.fop-navigation-menu-title" and click on the element at index "1"
-* Click on element by selector "a[href='/otomobiller']"
-* Click on element by selector "a[href='/suv/puma']"
-* Scroll to bottom
-* Navigate to "https://www.ford.com.tr/fiyat-listesi/otomobil/ford-puma"
+* Find element by selector "a[href='/fiyat-listesi']" and click
+* Find element by selector "a[href='/fiyat-listesi/otomobil']" and click
+* Wait for "5" seconds
+* Find element by selector "div[data-parent='#accordionPriceList2024'][class='panel-heading']" and click
+* Wait for "2" seconds
+* Find element by selector "div[data-parent='#accordionPriceList2024'][class='panel-collapse collapse show'] button.fop-button.btn-discover" and click
 * Wait for "5" seconds
 * Close the browser

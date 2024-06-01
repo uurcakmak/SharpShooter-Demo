@@ -236,6 +236,14 @@ namespace SharpShooterDemo
             Driver.ClickElement(elmInfo);
         }
 
+        [Step("Find element by selector <selector> and click")]
+        public void FindElementAndClick(string selector)
+        {
+            var element = Driver.GetElementBy(By.CssSelector(selector));
+            var elmInfo = new WebElementInfo(By.CssSelector(selector), element);
+            Driver.ClickElement(elmInfo);
+        }
+
         [Step("Close the browser",
             "Tarayıcıyı kapat")]
         public void CloseBrowser()

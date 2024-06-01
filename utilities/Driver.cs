@@ -126,6 +126,15 @@ namespace SharpShooterDemo.Utilities
         {
             return _webDriver.FindElement(By.CssSelector(css));
         }
+        public static IWebElement GetElementBy(By by)
+        {
+                        WebDriverWait wait = new WebDriverWait(_webDriver, TimeSpan.FromSeconds(10));
+            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(by));
+
+            var element = _webDriver.FindElement(by);
+
+            return element;
+        }
 
         public static ReadOnlyCollection<IWebElement> GetElementsBy(By by)
         {
