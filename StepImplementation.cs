@@ -1,8 +1,10 @@
 using System;
 using System.Linq;
 using System.Threading;
+using System.Xml.Linq;
 using Gauge.CSharp.Lib.Attribute;
 using OpenQA.Selenium;
+using SharpShooterDemo.models;
 using SharpShooterDemo.Utilities;
 
 namespace SharpShooterDemo
@@ -176,7 +178,8 @@ namespace SharpShooterDemo
         public void ClickOnElementById(string id)
         {
             var element = Driver.GetElementById(id);
-            Driver.ClickElement(element);
+            var elmInfo = new WebElementInfo(By.Id(id), element);
+            Driver.ClickElement(elmInfo);
         }
 
         [Step("Click on element by id <id> inside iframe by selector <selector>")]
@@ -186,21 +189,24 @@ namespace SharpShooterDemo
             Driver.SwitchToFrame(iframe);
 
             var element = Driver.GetElementById(id);
-            Driver.ClickElement(element);
+            var elmInfo = new WebElementInfo(By.Id(id), element);
+            Driver.ClickElement(elmInfo);
         }
 
         [Step("Click on element by name <name>")]
         public void ClickOnElementByName(string name)
         {
             var element = Driver.GetElementByName(name);
-            Driver.ClickElement(element);
+            var elmInfo = new WebElementInfo(By.Name(name), element);
+            Driver.ClickElement(elmInfo);
         }
 
         [Step("Click on element by class <className>")]
         public void ClickOnElementByClass(string className)
         {
             var element = Driver.GetElementByClassName(className);
-            Driver.ClickElement(element);
+            var elmInfo = new WebElementInfo(By.ClassName(className), element);
+            Driver.ClickElement(elmInfo);
         }
 
 
@@ -208,14 +214,16 @@ namespace SharpShooterDemo
         public void ClickOnElementBySelector(string selector)
         {
             var element = Driver.GetElementsBy(By.CssSelector(selector)).First();
-            Driver.ClickElement(element);
+            var elmInfo = new WebElementInfo(By.CssSelector(selector), element);
+            Driver.ClickElement(elmInfo);
         }
 
         [Step("Click on element by css <css>")]
         public void ClickOnElementByCss(string css)
         {
             var element = Driver.GetElementByCss(css);
-            Driver.ClickElement(element);
+            var elmInfo = new WebElementInfo(By.CssSelector(css), element);
+            Driver.ClickElement(elmInfo);
         }
 
         [Step("Find elements by selector <selector> and click on the element at index <position>")]
@@ -223,7 +231,9 @@ namespace SharpShooterDemo
         {
             var elements = Driver.GetElementsBy(By.CssSelector(selector));
             var element = elements[Convert.ToInt32(position) - 1];
-            Driver.ClickElement(element);
+
+            var elmInfo = new WebElementInfo(By.CssSelector(selector), element);
+            Driver.ClickElement(elmInfo);
         }
 
         [Step("Close the browser",

@@ -3,6 +3,13 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Interactions;
 using System.IO;
+using OpenQA.Selenium.Support;
+using System;
+using OpenQA.Selenium.Support.UI;
+using OpenQA.Selenium.Support.Events;
+using OpenQA.Selenium.Support.Extensions;
+using System.Collections.Generic;
+using SharpShooterDemo.models;
 
 namespace SharpShooterDemo.Utilities
 {
@@ -11,6 +18,8 @@ namespace SharpShooterDemo.Utilities
         private static IWebDriver _webDriver;
 
         public static IWebDriver WebDriver => _webDriver;
+
+        public static bool Headless { get; set; } = false;
 
         public static void Back()
         {
@@ -27,9 +36,16 @@ namespace SharpShooterDemo.Utilities
             element.Clear();
         }
 
-        public static void ClickElement(IWebElement element)
+        public static void ClickElement(WebElementInfo elmInfo)
         {
-            element.Click();
+            if (Headless)
+            {
+                WebDriverWait wait = new WebDriverWait(_webDriver, TimeSpan.FromSeconds(10));
+                wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(elmInfo.Locator));
+
+            }
+
+            elmInfo.Element.Click();
         }
 
         public static void DoubleClickElement(IWebElement element)
@@ -74,7 +90,7 @@ namespace SharpShooterDemo.Utilities
         public static void Forward()
         {
             _webDriver.Navigate().Forward();
-        
+
         }
         public static void SwitchToFrame(IWebElement element)
         {
@@ -118,7 +134,16 @@ namespace SharpShooterDemo.Utilities
 
         public static ReadOnlyCollection<IWebElement> GetElementsBy(By by)
         {
-            return _webDriver.FindElements(by);
+            ReadOnlyCollection<IWebElement> elements = null;
+            if (Headless)
+            {
+                WebDriverWait wait = new WebDriverWait(_webDriver, TimeSpan.FromSeconds(10));
+                wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(by));
+
+                elements = _webDriver.FindElements(by);
+            }
+
+            return elements;
         }
 
         public static string GetTextBoxValue(IWebElement element)
@@ -126,10 +151,15 @@ namespace SharpShooterDemo.Utilities
             return element.GetAttribute("value");
         }
 
-        public static void Initialize()
+        public static void Initialize(bool headless = false)
         {
+            Headless = headless;
             var driverPath = Path.Combine(Directory.GetCurrentDirectory(), "drivers");
-            _webDriver = new ChromeDriver(driverPath);
+            var options = new ChromeOptions();
+            if (Headless)
+                options.AddArgument("--headless");
+
+            _webDriver = new ChromeDriver(driverPath, options);
         }
 
         public static bool IsElementDisplayed(IWebElement element)
@@ -172,7 +202,7 @@ namespace SharpShooterDemo.Utilities
             Actions action = new Actions(_webDriver);
             action.ContextClick(element).Perform();
         }
-        
+
         public static void ScrollToBottom()
         {
             IJavaScriptExecutor js = (IJavaScriptExecutor)_webDriver;
