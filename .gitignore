@@ -1,5 +1,5 @@
 # Gauge - metadata dir
-#.gauge/screenshots
+.gauge/screenshots
 
 # Gauge - log files dir
 logs
